@@ -11,12 +11,6 @@ namespace AntiScreenLocker
         [DllImport("user32.dll", EntryPoint = "mouse_event")]
         private static extern int MouseEvent(int dwFlags, int dx, int dy, int cButtons, int dwExtraInfo);
 
-        [DllImport("user32.dll", EntryPoint = "SetCurrentPos")]
-        private static extern bool SetCurrentPos(int x, int y);
-
-        [DllImport("user32.dll", EntryPoint = "GetCurrentPos")]
-        private static extern bool GetCurrentPos(POINT point);
-
         [StructLayout(LayoutKind.Sequential)]
         public struct POINT
         {
